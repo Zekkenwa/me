@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     for (let i = 0; i < spawnCount; i++) {
         const sticker = document.createElement("img");
-        sticker.src = "assets/me lying down and do 'v' pose with 2 hands with shirt.png";
+        sticker.src = "assets/me lying down and do 'v' pose with 2 hands with shirt.jpg";
         
         // Random sizing between 40px and 100px
         const size = Math.floor(Math.random() * 60) + 40; 
