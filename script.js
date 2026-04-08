@@ -11,17 +11,6 @@ document.querySelectorAll('.nav-links a').forEach(n => n.addEventListener('click
     navLinks.classList.remove('active');
 }));
 
-// Add glowing cursor effect (optional subtile interactivity)
-document.addEventListener('mousemove', (e) => {
-    const orbs = document.querySelectorAll('.glass-orb');
-    const x = e.clientX / window.innerWidth;
-    const y = e.clientY / window.innerHeight;
-    
-    if (orbs.length > 0) orbs[0].style.transform = `translate(${x * 30}px, ${y * 30}px)`;
-    if(orbs.length > 1) {
-        orbs[1].style.transform = `translate(-${x * 40}px, -${y * 40}px)`;
-    }
-});
 
 // Experience Sticker Bomb
 document.addEventListener("DOMContentLoaded", () => {

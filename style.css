@@ -74,7 +74,7 @@ nav {
 }
 .hero-background-wrapper { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
 .hero-bg-image { position: absolute; bottom: 0; right: 0; width: 55%; height: 85%; object-fit: contain; object-position: bottom right; opacity: 1; z-index: 2; filter: drop-shadow(0 15px 20px rgba(44, 74, 59, 0.4)); }
-.hero-gradient-overlay { display: none; }
+
 
 .hero-content { position: relative; z-index: 3; max-width: 650px; width: 100%; }
 
@@ -127,11 +127,11 @@ nav {
     background: var(--card-bg); border: 6px solid #fff; border-radius: 50px;
     box-shadow: 0 8px 0 rgba(0,0,0,0.05); color: var(--accent);
 }
-.line { display: none; }
+
 
 /* About */
 .parallax-gallery { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden; opacity: 0.15; }
-.parallax-track { display: flex; height: 100%; gap: 10px; width: max-content; animation: scroll-parallax 40s linear infinite; }
+.parallax-track { display: flex; height: 100%; gap: 10px; width: max-content; animation: scroll-parallax 18s linear infinite; }
 .parallax-img { height: 100%; object-fit: cover; width: auto; border: 4px solid #fff; border-radius: 20px;}
 @keyframes scroll-parallax { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
