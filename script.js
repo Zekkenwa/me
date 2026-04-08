@@ -11,6 +11,21 @@ document.querySelectorAll('.nav-links a').forEach(n => n.addEventListener('click
     navLinks.classList.remove('active');
 }));
 
+// Go To Top Button
+const goToTopBtn = document.getElementById('go-to-top');
+if (goToTopBtn) {
+    window.addEventListener('scroll', () => {
+        const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+        if (scrollPercent > 0.25) {
+            goToTopBtn.classList.add('visible');
+        } else {
+            goToTopBtn.classList.remove('visible');
+        }
+    });
+    goToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
 
 // Experience Sticker Bomb
 document.addEventListener("DOMContentLoaded", () => {
