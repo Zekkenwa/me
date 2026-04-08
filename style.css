@@ -117,7 +117,7 @@ nav {
 @keyframes bob { 0% { transform: translateY(0); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0); } }
 
 /* Sections */
-.section { padding: 100px 20px; position: relative; }
+.section { padding: 100px 20px; position: relative; overflow-x: hidden; }
 .dark-section { background-color: var(--dark-section); border-top: 6px dashed #fff; border-bottom: 6px dashed #fff; }
 .section-container { max-width: 1100px; margin: 0 auto; position: relative; z-index: 2;}
 
@@ -157,7 +157,7 @@ nav {
 .timeline-content li::before { content: '✨'; position: absolute; left: 0; font-size: 0.8rem; top: 4px; }
 
 /* Projects */
-.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 40px; }
 .project-card {
     background: var(--card-bg); border: 6px solid #fff; border-radius: 40px; overflow: hidden;
     transition: var(--transition); box-shadow: 0 10px 0 rgba(0,0,0,0.05); cursor: pointer;
@@ -174,7 +174,7 @@ nav {
 }
 
 /* Skills */
-.skills-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+.skills-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 40px; }
 .skill-category { background: #fff; border: 6px solid #fff; border-radius: 40px; padding: 30px; box-shadow: 0 10px 0 rgba(0,0,0,0.05); transition: var(--transition); }
 .skill-category:hover { transform: scale(1.03); box-shadow: 0 15px 0 rgba(0,0,0,0.05); }
 .skill-category h3 { margin-bottom: 25px; color: var(--accent); font-weight: 700; font-size: 1.4rem; text-align: center; }
@@ -202,7 +202,53 @@ nav {
 .contact-link:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 13px 0 rgba(0,0,0,0.1); background: #9E7DFF; }
 
 /* Footer */
-footer { text-align: center; padding: 60px 20px; color: var(--text-secondary); font-weight: 600; font-size: 1.1rem; }
+footer {
+    position: relative;
+    padding: 0;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+.footer-img {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+.footer-caption {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    text-align: center;
+    border-top: 4px dashed var(--wood-outline);
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    overflow: hidden;
+}
+.footer-caption p {
+    color: #888;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.footer-caption p:first-child {
+    font-size: clamp(0.5rem, 2vw, 0.85rem);
+    margin-bottom: 5px;
+    white-space: nowrap;
+}
+.footer-caption p:last-child {
+    font-size: clamp(0.6rem, 2.5vw, 1rem);
+    white-space: nowrap;
+}
+.footer-caption a {
+    color: #888;
+    text-decoration: none;
+}
 
 /* Sticker Image Classes & Animations */
 .sticker-img {
