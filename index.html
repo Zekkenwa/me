@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raihan Fadil Akbar | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -31,7 +31,16 @@
         <div class="hero-background-wrapper">
             <div class="glass-orb orb1"></div>
             <div class="glass-orb orb2"></div>
-            <img src="profile.png" alt="Raihan Fadil Akbar Background" class="hero-bg-image">
+            
+            <!-- Randomized Ambient Clouds -->
+            <div class="glass-orb" style="width: 150px; height: 100px; left: 10%; top: 15%; display: block; filter: blur(40px);"></div>
+            <div class="glass-orb" style="width: 250px; height: 120px; right: 8%; top: 25%; display: block; filter: blur(50px);"></div>
+            <div class="glass-orb" style="width: 180px; height: 80px; left: 25%; top: 60%; display: block; filter: blur(30px);"></div>
+            <div class="glass-orb" style="width: 300px; height: 140px; right: 18%; top: 65%; display: block; filter: blur(60px);"></div>
+            <div class="glass-orb" style="width: 200px; height: 90px; left: 45%; top: 10%; display: block; filter: blur(45px);"></div>
+            <div class="glass-orb" style="width: 220px; height: 110px; right: 40%; top: 80%; display: block; filter: blur(55px);"></div>
+            
+            <img src="assets/main profile.png" alt="Raihan Fadil Akbar Background" class="hero-bg-image">
             <div class="hero-gradient-overlay"></div>
         </div>
         
@@ -49,7 +58,61 @@
         </div>
     </header>
 
-    <section id="about" class="section">
+    <!-- Marquee pulled outside hero to avoid 1100px max-width clipping -->
+    <div class="marquee-outer">
+        <div class="marquee-wrapper">
+            <div class="marquee-content">
+                <!-- Group 1 -->
+                <div class="app-badge"><i class="fas fa-drafting-compass"></i> AutoCAD</div>
+                <div class="app-badge"><i class="fas fa-cogs"></i> Autodesk Inventor</div>
+                <div class="app-badge"><i class="fas fa-cube"></i> SolidWorks</div>
+                <div class="app-badge"><i class="fas fa-hammer"></i> Autodesk Fusion</div>
+                <div class="app-badge"><i class="fas fa-file-excel"></i> MS Excel</div>
+                <div class="app-badge"><i class="fas fa-microchip"></i> Arduino IDE</div>
+                <div class="app-badge"><i class="fas fa-terminal"></i> C++</div>
+                <div class="app-badge"><i class="fab fa-html5"></i> HTML</div>
+                <div class="app-badge"><i class="fab fa-css3-alt"></i> CSS</div>
+                <div class="app-badge"><i class="fas fa-magic"></i> Google Antigravity</div>
+                <div class="app-badge"><i class="fas fa-film"></i> DaVinci Resolve</div>
+                <div class="app-badge"><i class="fas fa-bezier-curve"></i> Adobe Illustrator</div>
+                <div class="app-badge"><i class="fas fa-video"></i> Adobe After Effect</div>
+                <div class="app-badge"><i class="fas fa-pen-nib"></i> Affinity Designer</div>
+                <div class="app-badge"><i class="fas fa-palette"></i> Canva</div>
+                <!-- Group 2 (Duplicate for seamless loop) -->
+                <div class="app-badge"><i class="fas fa-drafting-compass"></i> AutoCAD</div>
+                <div class="app-badge"><i class="fas fa-cogs"></i> Autodesk Inventor</div>
+                <div class="app-badge"><i class="fas fa-cube"></i> SolidWorks</div>
+                <div class="app-badge"><i class="fas fa-hammer"></i> Autodesk Fusion</div>
+                <div class="app-badge"><i class="fas fa-file-excel"></i> MS Excel</div>
+                <div class="app-badge"><i class="fas fa-microchip"></i> Arduino IDE</div>
+                <div class="app-badge"><i class="fas fa-terminal"></i> C++</div>
+                <div class="app-badge"><i class="fab fa-html5"></i> HTML</div>
+                <div class="app-badge"><i class="fab fa-css3-alt"></i> CSS</div>
+                <div class="app-badge"><i class="fas fa-magic"></i> Google Antigravity</div>
+                <div class="app-badge"><i class="fas fa-film"></i> DaVinci Resolve</div>
+                <div class="app-badge"><i class="fas fa-bezier-curve"></i> Adobe Illustrator</div>
+                <div class="app-badge"><i class="fas fa-video"></i> Adobe After Effect</div>
+                <div class="app-badge"><i class="fas fa-pen-nib"></i> Affinity Designer</div>
+                <div class="app-badge"><i class="fas fa-palette"></i> Canva</div>
+            </div>
+        </div>
+    </div>
+
+    <section id="about" class="section section-with-floats">
+        <div class="parallax-gallery">
+            <div class="parallax-track">
+                <img src="assets/IMG_4272.jpg" class="parallax-img">
+                <img src="assets/IMG_3491 (1).JPG" class="parallax-img">
+                <img src="assets/IMG-20250828-WA0131.jpg" class="parallax-img">
+                <img src="assets/WhatsApp Image 2025-07-06 at 14.57.45_b19a4240.jpg" class="parallax-img">
+                <img src="assets/IMG-20260101-WA0054.jpg" class="parallax-img">
+                <!-- clone -->
+                <img src="assets/IMG_4272.jpg" class="parallax-img">
+                <img src="assets/IMG_3491 (1).JPG" class="parallax-img">
+                <img src="assets/IMG-20250828-WA0131.jpg" class="parallax-img">
+            </div>
+        </div>
+        <img src="assets/me doing pose 'absolutely cinema' with my graduiation coat.png" alt="Absolutely Cinema" class="sticker-img floating-photo-right float-fast">
         <div class="section-container">
             <div class="section-header">
                 <h2>About Me</h2>
@@ -62,7 +125,8 @@
         </div>
     </section>
 
-    <section id="experience" class="section dark-section">
+    <section id="experience" class="section dark-section section-with-floats">
+        <div id="experience-stickers" style="position:absolute; top:0; left:0; width:100%; height:100%; overflow:hidden; pointer-events:none; z-index:0;"></div>
         <div class="section-container">
             <div class="section-header">
                 <h2>Experience</h2>
@@ -106,14 +170,15 @@
         </div>
     </section>
 
-    <section id="projects" class="section">
+    <section id="projects" class="section section-with-floats">
         <div class="section-container">
             <div class="section-header">
                 <h2>Featured Projects</h2>
                 <div class="line"></div>
             </div>
             <div class="projects-grid">
-                <div class="project-card glassmorphism">
+                <div class="project-card bouncy-hover">
+                    <img src="assets/jib crane cad photo.png" alt="Jib Crane CAD" class="sticker-img full-sticker">
                     <div class="project-content">
                         <h3>1-Ton Jib Crane Design</h3>
                         <p>Designed a 1-ton capacity jib crane by calculating structural material requirements and selecting appropriate joint fasteners utilizing mathematical integrity formulas. Delivered a complete, manufacturing-ready blueprint.</p>
@@ -124,7 +189,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card glassmorphism">
+                <div class="project-card bouncy-hover">
+                    <img src="assets/my cad design, a fixed conveyer base.png" alt="Conveyer CAD" class="sticker-img full-sticker">
                     <div class="project-content">
                         <h3>Nano Carbon Powder Machine</h3>
                         <p>Collaborated with a team to calculate design parameters and source appropriate mechanical joints for a PEDC-06 Nano Carbon Powder machine, applying theoretical mechanics to practical design challenges.</p>
@@ -135,7 +201,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card glassmorphism">
+                <div class="project-card bouncy-hover">
+                    <img src="assets/steam turbine.png" alt="Thermodynamics Fan" class="sticker-img full-sticker">
                     <div class="project-content">
                         <h3>PLTGU Thermal Systems Analysis</h3>
                         <p>Conducted a comprehensive thermal efficiency analysis of steam turbines and condenser cooling systems in Combined Cycle Power Plants (PLTGU) to evaluate operational performance.</p>
@@ -146,7 +213,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card glassmorphism">
+                <div class="project-card bouncy-hover">
+                    <img src="assets/router 2d.jpeg" alt="2D Router" class="sticker-img full-sticker">
                     <div class="project-content">
                         <h3>2D Milling Production Run</h3>
                         <p>Executed a full-cycle production run on 2D milling routers, including comprehensive G-code programming, machining operation, and rigorous quality inspection (QC).</p>
@@ -157,7 +225,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card glassmorphism">
+                <div class="project-card bouncy-hover">
+                    <img src="assets/emco vmc 300.jpg" alt="Emco 300" class="sticker-img full-sticker">
                     <div class="project-content">
                         <h3>3-Axis CNC Programming (Emco VMC 300)</h3>
                         <p>Programmed and executed complex 3-axis CNC operations on an Emco VMC 300 machine. Simulated toolpaths using Mastercam prior to physical manufacturing.</p>
@@ -168,7 +237,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card glassmorphism">
+                <div class="project-card bouncy-hover">
+                    <img src="assets/my timer circuit.png" alt="Circuit Setup" class="sticker-img full-sticker">
                     <div class="project-content">
                         <h3>Electrical Timer Circuit Builder</h3>
                         <p>Constructed and verified a functional electrical contractor timer circuit, demonstrating hands-on capabilities bridging mechanical and foundational electrical engineering.</p>
@@ -182,7 +252,8 @@
         </div>
     </section>
 
-    <section id="skills" class="section dark-section">
+    <section id="skills" class="section dark-section section-with-floats">
+        <img src="assets/me with safety head smiling.png" alt="Safety Head Smiling" class="sticker-img floating-photo-left float-fast">
         <div class="section-container">
             <div class="section-header">
                 <h2>Technical Skills</h2>
@@ -225,9 +296,10 @@
         </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section section-with-floats" style="overflow: hidden;">
+        <img src="assets/me kinda cool with red suit while casually smiling.png" alt="Cool Red Suit" class="sticker-img peek-img">
         <div class="section-container">
-            <div class="contact-box glassmorphism">
+            <div class="contact-box bouncy-hover">
                 <h2>Let's Create Something Great</h2>
                 <p>Ready to bring your engineering vision to life? Let's collaborate on your next project.</p>
                 <div class="contact-links">
@@ -239,8 +311,12 @@
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Raihan Fadil Akbar. All rights reserved. | <a href="https://github.com/rifqi-rahman/rifqi" target="_blank" style="color:#888; text-decoration:none;">Inspired by Rifqi Rahman</a></p>
+    <footer style="position: relative; padding: 0; background-color: var(--bg-color); display: flex; flex-direction: column; min-height: none;">
+        <img src="assets/my oshis or my fav idol vtubers.png" style="width: 100%; display: block; position: relative; z-index: 2;" alt="Favorite VTubers">
+        <div style="background: rgba(255,255,255,0.9); padding: 20px; text-align: center; border-top: 4px dashed var(--wood-outline); position: relative; z-index: 10; width: 100%;">
+            <p style="font-size: 0.85rem; color: #888; font-weight: 700; margin-bottom: 5px;">*The VTuber artworks featured above are not mine and formally belong to their respective creators and owners.</p>
+            <p>&copy; 2026 Raihan Fadil Akbar. All rights reserved. | <a href="https://github.com/rifqi-rahman/rifqi" target="_blank" style="color:#888; text-decoration:none;">Inspired by Rifqi Rahman</a></p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
