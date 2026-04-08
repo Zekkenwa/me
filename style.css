@@ -1,12 +1,12 @@
 :root {
-    --bg-color: #0d0f12;
-    --card-bg: rgba(255, 255, 255, 0.03);
-    --card-border: rgba(255, 255, 255, 0.05);
-    --text-primary: #f0f0f0;
-    --text-secondary: #9ca3af;
-    --accent: #3b82f6;
-    --accent-glow: rgba(59, 130, 246, 0.5);
-    --dark-section: #0a0b0e;
+    --bg-color: #0e0e0f;
+    --card-bg: rgba(32, 31, 33, 0.4);
+    --card-border: rgba(72, 72, 73, 0.2);
+    --text-primary: #ffffff;
+    --text-secondary: #adaaab;
+    --accent: #bd9dff;
+    --accent-glow: rgba(189, 157, 255, 0.4);
+    --dark-section: #000000;
     
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -108,28 +108,68 @@ nav {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 120px 20px 60px;
+    justify-content: center;
+    text-align: center;
     position: relative;
+    padding: 120px 20px 60px;
+    overflow: hidden;
+}
+
+.hero-background-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    opacity: 0.85;
+}
+
+.hero-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(14, 14, 15, 0.1) 0%, rgba(14, 14, 15, 0.8) 70%, var(--bg-color) 100%);
+    z-index: 1;
 }
 
 .hero-content {
-    flex: 1;
+    position: relative;
     z-index: 2;
+    max-width: 900px;
+    width: 100%;
+}
+
+.glass-plate {
+    background: rgba(38, 38, 39, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--card-border);
+    padding: 60px 40px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 }
 
 .subtitle {
     color: var(--accent);
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     font-size: 1.1rem;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     display: inline-block;
-    padding: 5px 15px;
-    background: rgba(59, 130, 246, 0.1);
+    padding: 6px 18px;
+    background: rgba(189, 157, 255, 0.1);
     border-radius: 50px;
+    border: 1px solid rgba(189, 157, 255, 0.2);
 }
 
 .title {
@@ -137,7 +177,7 @@ nav {
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 20px;
-    letter-spacing: -2px;
+    letter-spacing: -0.02em;
 }
 
 .dot {
@@ -153,14 +193,15 @@ nav {
 
 .hero-desc {
     color: var(--text-secondary);
-    max-width: 500px;
-    margin-bottom: 40px;
-    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1.15rem;
 }
 
 .hero-buttons {
     display: flex;
     gap: 15px;
+    justify-content: center;
 }
 
 .btn {
