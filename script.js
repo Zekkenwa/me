@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             // Check if user is actively passing over the contact section bounds
-            if (entry.isIntersecting && window.innerWidth <= 900) {
+            if (entry.isIntersecting && window.innerWidth <= 1020) {
                 peekImg.classList.add("slide-in-active");
                 peekImg.classList.remove("ghost-mode"); // Reset back to opaque
                 
