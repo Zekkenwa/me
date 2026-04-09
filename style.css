@@ -48,14 +48,7 @@ nav {
 }
 .nav-container { display: flex; justify-content: space-between; width: 100%; align-items: center; }
 
-.logo {
-    width: 48px; height: 48px;
-    background: var(--accent); border-radius: 50%;
-    border: 4px solid #fff; box-shadow: 0 4px 0 rgba(0,0,0,0.2);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.9rem; font-weight: 800; color: #fff;
-    text-shadow: 0 2px 0 rgba(0,0,0,0.25); flex-shrink: 0;
-}
+.logo { font-size: 1.8rem; font-weight: 800; color: #fff; text-shadow: 0 4px 0 var(--wood-outline); }
 
 .nav-links { list-style: none; display: flex; align-items: center; gap: 30px; }
 .nav-links a {
