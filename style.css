@@ -123,9 +123,10 @@ nav {
 
 .section-header { margin-bottom: 60px; text-align: center; }
 .section-header h2 {
-    font-size: 3rem; margin-bottom: 15px; display: inline-block; padding: 10px 40px;
+    font-size: clamp(1.3rem, 6vw, 3rem); margin-bottom: 15px; display: inline-block; padding: 10px 40px;
     background: var(--card-bg); border: 6px solid #fff; border-radius: 50px;
     box-shadow: 0 8px 0 rgba(0,0,0,0.05); color: var(--accent);
+    white-space: nowrap;
 }
 
 
@@ -442,9 +443,9 @@ footer {
     .about-content p { max-width: 65%; margin-right: auto; margin-left: 0; }
     .floating-photo-right { position: sticky !important; top: 120px !important; float: right !important; width: 33% !important; order: unset !important; margin-top: 50px; z-index: 10; align-self: unset !important; }
 
-    #skills { flex-direction: row-reverse; flex-wrap: wrap; padding: 40px 10px; }
-    #skills .section-container { width: 70%; margin: 0; flex: unset; min-width: unset; order: unset; }
-    .floating-photo-left { width: 25% !important; order: unset !important; margin-left: 10px; margin-top: 60px; z-index: 10; align-self: unset !important; }
+    #skills { display: block; padding: 40px 10px; }
+    #skills .section-container { width: 100%; margin: 0 auto; flex: unset; min-width: unset; order: unset; }
+    .floating-photo-left { display: none; }
 
     /* Peek Mobile Waitstaff Avatar */
     .peek-img { 
