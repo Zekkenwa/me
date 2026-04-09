@@ -67,36 +67,69 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// Contact Mobile Waitstaff Slide-In
+// Contact Image (red suit) – slide-in on mobile, and on desktop when covered by cards
 document.addEventListener("DOMContentLoaded", () => {
-    // Only fire logic if we are running in mobile dimensions or viewport resizes to mobile
     const contactSection = document.getElementById("contact");
     const peekImg = document.querySelector(".peek-img");
     let ghostTimeout;
     
     if (!contactSection || !peekImg) return;
-    
+
+    // Detect if peek-img would overlap the contact-box on desktop and apply mobile behavior
+    function checkPeekCoverage() {
+        if (window.innerWidth <= 900) {
+            peekImg.classList.remove('peek-img-covered');
+            return;
+        }
+        const contactBox = document.querySelector('.contact-box');
+        if (!contactBox) return;
+
+        // peek-img CSS: position absolute; right: 5%; width: 250px
+        const PEEK_RIGHT_RATIO = 0.05; // matches CSS `right: 5%`
+        const sectionWidth = contactSection.offsetWidth;
+        const peekWidth = peekImg.offsetWidth || 250; // compute from element; fallback matches CSS width
+        const peekLeft = sectionWidth * (1 - PEEK_RIGHT_RATIO) - peekWidth;
+
+        // Contact-box right edge relative to section left
+        const sectionRect = contactSection.getBoundingClientRect();
+        const boxRect = contactBox.getBoundingClientRect();
+        const boxRightInSection = boxRect.right - sectionRect.left;
+
+        if (peekLeft < boxRightInSection) {
+            peekImg.classList.add('peek-img-covered');
+        } else {
+            peekImg.classList.remove('peek-img-covered');
+            peekImg.classList.remove('slide-in-active');
+            peekImg.classList.remove('ghost-mode');
+            clearTimeout(ghostTimeout);
+        }
+    }
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            // Check if user is actively passing over the contact section bounds
-            if (entry.isIntersecting && window.innerWidth <= 900) {
+            const isMobile = window.innerWidth <= 900;
+            const isCovered = peekImg.classList.contains('peek-img-covered');
+
+            if (entry.isIntersecting && (isMobile || isCovered)) {
                 peekImg.classList.add("slide-in-active");
-                peekImg.classList.remove("ghost-mode"); // Reset back to opaque
-                
-                // Set the 2 second clock before fading and unlocking clicks
+                peekImg.classList.remove("ghost-mode");
+
                 clearTimeout(ghostTimeout);
                 ghostTimeout = setTimeout(() => {
                     peekImg.classList.add("ghost-mode");
                 }, 2000);
-            } else {
+            } else if (!entry.isIntersecting) {
                 peekImg.classList.remove("slide-in-active");
                 peekImg.classList.remove("ghost-mode");
                 clearTimeout(ghostTimeout);
             }
         });
     }, {
-        threshold: 0.25 // Trigger when at least 25% of contact section is visible
+        threshold: 0.25
     });
-    
+
     observer.observe(contactSection);
+
+    checkPeekCoverage();
+    window.addEventListener('resize', checkPeekCoverage, { passive: true });
 });
