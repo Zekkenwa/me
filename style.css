@@ -191,8 +191,8 @@ nav {
     background: var(--card-bg); border: 6px solid #fff; padding: 60px; border-radius: 50px;
     text-align: center; max-width: 800px; margin: 0 auto; box-shadow: 0 15px 0 rgba(0,0,0,0.05);
 }
-.contact-box h2 { font-size: 3rem; margin-bottom: 20px; color: var(--text-primary); }
-.contact-box p { color: var(--text-secondary); margin-bottom: 40px; font-size: 1.2rem; font-weight: 500; }
+.contact-box h2 { font-size: clamp(1.4rem, 4vw, 3rem); margin-bottom: 20px; color: var(--text-primary); white-space: nowrap; }
+.contact-box p { color: var(--text-secondary); margin-bottom: 40px; font-size: clamp(0.85rem, 2vw, 1.2rem); font-weight: 500; white-space: nowrap; }
 .contact-links { display: flex; flex-direction: column; gap: 20px; align-items: center; }
 .contact-link {
     display: flex; align-items: center; gap: 15px; color: #fff; background: var(--accent);
@@ -350,6 +350,7 @@ footer {
     align-self: flex-start;
     transform: rotate(10deg);
     margin-top: 80px;
+    margin-right: 40px;
     z-index: 3;
 }
 
@@ -366,6 +367,7 @@ footer {
     align-self: flex-start;
     transform: rotate(-8deg);
     margin-top: 60px;
+    margin-left: 40px;
     z-index: 3;
 }
 
@@ -440,7 +442,7 @@ footer {
     /* Mobile Overrides for Sticky Scrolls */
     #about { display: block; }
     #about .section-container { flex: unset; min-width: unset; order: unset; }
-    .about-content p { max-width: 65%; margin-right: auto; margin-left: 0; }
+    .about-content p { max-width: 65%; margin-right: auto; margin-left: 0; text-align: justify; font-size: clamp(0.85rem, 3.5vw, 1.1rem); }
     .floating-photo-right { position: sticky !important; top: 120px !important; float: right !important; width: 33% !important; order: unset !important; margin-top: 50px; z-index: 10; align-self: unset !important; }
 
     #skills { display: block; padding: 40px 10px; }
